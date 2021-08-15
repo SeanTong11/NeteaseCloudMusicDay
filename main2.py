@@ -110,7 +110,9 @@ if __name__=='__main__':
             #网易云6点更新推荐 8点后处理避免将昨天的歌单放到今天的歌单里
             print('不到8点，不处理')
             exit(0)
-        list_name = time.strftime('%Y-%m-%d') + '日推'
+        # 原版按日期新建歌单
+        # list_name = time.strftime('%Y-%m-%d') + '日推'
+        list_name = '日推自动生成'
         print('生成歌单名 list_name=%s' % list_name)
         user_music_list = cm.getUserMusicList(uid)
         if list_name in user_music_list:
